@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import React, { createContext, useState } from 'react';
 import './App.css'
 import Btn from './Components/Btn'
 import Navbar from './Components/Navbar'
+
+const signInContext = React.createContext();
 
 function App() {
   const [ signIn, setSignIn ] = useState(false);
@@ -11,9 +13,10 @@ function App() {
   }
 
   return (
-    <>
-      <Navbar signIn={signIn} handleToggle={handleClick} />
-    </>
+    <signInContext.Provider value={{ signIn, handleClick }}>
+      <Navbar />
+      <Btn />
+    </signInContext.Provider>
   )
 }
 
