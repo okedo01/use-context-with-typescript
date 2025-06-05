@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({signIn, onClick}) => {
   return (
-    <div>Navbar</div>
+    <div>
+
+    </div>
   )
 }
 
