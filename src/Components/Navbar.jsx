@@ -1,9 +1,11 @@
 import React from 'react'
+import Btn from './Btn'
 
-const Navbar = () => {
+const Navbar = ({ signIn, handleToggle }) => {
   return (
     <div>
-        <h1>Navigation</h1>
+        <h1> {signIn ? "Welcome User" : "Sign In"} </h1>
+        <Btn signIn={signIn} handleToggle={handleToggle} />
     </div>
   )
 }

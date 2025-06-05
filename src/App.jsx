@@ -1,14 +1,18 @@
+import { useState } from 'react';
 import './App.css'
 import Btn from './Components/Btn'
 import Navbar from './Components/Navbar'
 
 function App() {
+  const [ signIn, setSignIn ] = useState(false);
+
+  const handleClick = () => {
+    setSignIn(!signIn);
+  }
 
   return (
     <>
-      <h1>Welcome Home</h1>
-      <Navbar />
-      <Btn />
+      <Navbar signIn={signIn} handleToggle={handleClick} />
     </>
   )
 }

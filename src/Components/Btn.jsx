@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 
-const Btn = () => {
-    const [ signIn, setSignIn ] = useState(false);
+const Btn = ({ signIn, handleToggle }) => {
+
   return (
     <div>
-        <h1>Button</h1>
-        <button onClick={() => setSignIn(!signIn)}>
+        <button onClick={handleToggle}>
             { signIn ? "Sign Out" : "Sign In"}
         </button>
     </div>
