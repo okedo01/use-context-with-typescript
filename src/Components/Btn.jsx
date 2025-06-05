@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+import { signInContext } from '../App';
 
-const Btn = ({ signIn, handleToggle }) => {
+const Btn = () => {
+
+    const { signIn, handleClick } = useContext(signInContext);
 
   return (
     <div>
-        <button onClick={handleToggle}>
-            { signIn ? "Sign Out" : "Sign In"}
+        <button onClick={handleClick}>
+            { signIn ? "Sign Out" : "Sign In" }
         </button>
     </div>
   )

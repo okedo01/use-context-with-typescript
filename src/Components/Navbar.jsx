@@ -1,11 +1,12 @@
-import React from 'react'
-import Btn from './Btn'
+import React, { useContext } from 'react'
+import { signInContext } from '../App';
 
-const Navbar = ({ signIn, handleToggle }) => {
+const Navbar = () => {
+    const { signIn, handleClick } = useContext(signInContext);
+
   return (
     <div>
         <h1> {signIn ? "Welcome User" : "Sign In"} </h1>
-        <Btn signIn={signIn} handleToggle={handleToggle} />
     </div>
   )
 }
