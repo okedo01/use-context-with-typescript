@@ -1,19 +1,14 @@
 import './App.css'
-import Navbar from './Components/Navbar'
 import Btn from './Components/Btn'
-import { useState } from 'react'
+import Navbar from './Components/Navbar'
 
 function App() {
 
-  const [ signIn, setSignIn ] = useState(false);
-
-  const handleToggle = () => {
-    setSignIn(!signIn);
-  }
-
   return (
     <>
-      <Navbar signIn={signIn} onClick={handleToggle}/>
+      <h1>Welcome Home</h1>
+      <Navbar />
+      <Btn />
     </>
   )
 }
