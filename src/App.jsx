@@ -1,22 +1,12 @@
-import React, { createContext, useState } from 'react';
-import './App.css'
-import Btn from './Components/Btn'
-import Navbar from './Components/Navbar'
+import Count from "./Components/Count"
+import Form from "./Components/Form"
 
-export const signInContext = React.createContext();
 function App() {
-
-  const [ signIn, setSignIn ] = useState(false);
-
-  const handleClick = () => {
-    setSignIn(!signIn);
-  }
-
   return (
-    <signInContext.Provider value={{ signIn, handleClick }}>
-      <Navbar />
-      <Btn />
-    </signInContext.Provider>
+    <div>
+      {/* <Form /> */}
+      <Count />
+    </div>
   )
 }
 
