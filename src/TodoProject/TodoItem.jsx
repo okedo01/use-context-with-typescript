@@ -1,6 +1,5 @@
 export default function TodoItem({item, setTodos, todos}) {
     function handleDelete() {
-        console.log(item);
         const updatdTodos = todos.filter((todo) => todo !== item);
         setTodos(updatdTodos);
     }
