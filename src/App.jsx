@@ -1,11 +1,9 @@
-import Count from "./Components/Count"
-import Form from "./Components/Form"
+import Todo from "./TodoProject/Todo"
 
 function App() {
   return (
     <div>
-      {/* <Form /> */}
-      <Count />
+      <Todo />
     </div>
   )
 }
