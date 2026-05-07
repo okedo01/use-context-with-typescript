@@ -8,6 +8,9 @@ export default function Todo() {
 
     function handleSubmit(e) {
         e.preventDefault();
+        if(todo.trim() === "") {
+            return;
+        }
         setTodos([...todos, todo]);
         setTodo("");
     }
