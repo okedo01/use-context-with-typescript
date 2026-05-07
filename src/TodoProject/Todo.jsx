@@ -21,7 +21,7 @@ export default function Todo() {
                 <input onChange={(e) => setTodo(e.target.value)} type="text" value={todo} placeholder="Enter a todo..."/>
                 <button type="submit">Add</button>
             </form>
-            <TodoList todos={todos}/>
+            <TodoList todos={todos} setTodos={setTodos}/>
         </div>
     )
 }
