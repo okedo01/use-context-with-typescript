@@ -7,11 +7,13 @@ export default function TodoItem({ item, todos, setTodos }) {
     }
     return (
         <div>
-            <li>{item}
-                <span>
-                    <button onClick={() => handleDelete(item)}>x</button>
-                </span>
-            </li>
+            {item}
+            <span>
+                <button style={{
+                    background: "red"
+                }} onClick={() => handleDelete(item)}>x</button>
+            </span>
+
         </div>
     )
 }
