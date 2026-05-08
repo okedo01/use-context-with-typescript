@@ -13,7 +13,6 @@ export default function Todo() {
         }
         setTodos([...todos, todo]);
         setTodo("");
-        console.log(todo);
     }
     return (
         <div>
